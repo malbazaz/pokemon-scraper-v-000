@@ -3,14 +3,14 @@ class Pokemon
 
   db = SQLite3::Database.new("db/pokemon.db")
 
-  attr_accessor :type, :db, :name, :id
+  attr_accessor :type, :db, :name, :id, :hp
 
   def initialize(id:, name:, type:, db:)
     @id = id
     @name = name
     @type = type
     @db = db
-
+    @hp = hp
   end
 
   def self.save(name, type, db)
